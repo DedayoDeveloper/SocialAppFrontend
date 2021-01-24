@@ -1,0 +1,42 @@
+.innerFormWrapper{
+    background: #fff;
+    padding: 30px 0;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.input{
+    width: 100%;
+    outline: 0;
+    padding: 4px 7px;
+}
+
+.formWrapper{
+    position: relative;
+    top: 43px;
+    
+}
+
+.Button{
+    width: 100%;
+    padding: 8px 0 6px 0;
+    background: #2391d5;
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    outline: 0;
+}
+
+@media screen and (max-width: 768px){
+    .input{
+        width: 100%;
+        outline: 0;
+        padding: 11px 7px;
+        border-bottom: 2px solid #dcd3d3;
+        border-right: none;
+        border-left: none;
+        border-top: none;
+    }
+    .innerFormWrapper div.formSearch{
+        margin: 0 0 17px 0;
+    }
+}

@@ -1,0 +1,84 @@
+
+.summarydiv{
+    /* display: grid; */
+ /* grid-template-columns: 1fr 1fr 1fr; */
+ /* grid-gap: 1em; */
+ /* justify-content: center; */
+ /* align-items: center; */
+ background: #fff;
+ padding: 23px;
+ border: 1px #ebf3ff solid;
+ box-shadow: 0 0 4px 0 rgba(0,0,0,.08), 0 2px 4px 0 rgba(0,0,0,.12);
+
+}
+
+.summarydiv h5{
+ text-align: center;
+}
+
+.tripSummary{display: grid;
+grid-template-columns: auto auto auto;
+background: #EDEDED;
+padding: 20px;}
+
+.tripSummary .item p{
+ margin: 0 0 5px 0;
+ font-size: 11px;
+ color: #1A1A1A;
+}
+
+.tripSummary .item h4{
+ color: #191818;
+ font-size: 26px;
+}
+.tripSummary .arrow p{
+ text-align: center;
+ position: relative;
+ top: 26px;
+}
+
+.tripDateSummary{
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ /* padding: 20px; */
+ margin: 14px 0;
+ gap: 1em;
+}
+
+.TDItem{
+ background: #EDEDED;
+ padding: 19px 20px;
+}
+
+.TDItem p{
+ margin: 3px 0;
+ font-size: 11px;
+ color: #2492D6;
+}
+
+.TDItem h4{
+ font-size: 16px;
+ margin: 0;
+}
+
+.selection{
+ display: grid;
+ gap: 1em;
+ grid-template-columns: 1fr 1fr 1fr;
+ margin: 40px 0 10px 0;
+}
+.selection button{
+ width: 100%;
+ padding: 8px 0 6px 0;
+ /* background: #2391E2; */
+ color: #2f3236;
+ font-weight: 700;
+ border: 2px solid #2391d5;
+ border-style: dashed;
+ outline: 0;
+}
+.selection button.active{
+ background: #2391d5;
+ color: #fff;
+ border-color: #fff;
+}

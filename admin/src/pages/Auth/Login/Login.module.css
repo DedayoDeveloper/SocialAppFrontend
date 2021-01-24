@@ -1,0 +1,32 @@
+.Login{
+    height: 100vh;
+    color: #fff;
+}
+
+@media(max-width: 992px){
+    .Login{
+        /* height: 100%; */
+    }
+   
+    
+    
+}
+
+.formArea{
+    margin: auto;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.formHeader h3:after{
+    content: '';
+    border: 2px solid #ac0464;
+    display: block;
+    width: 44px;
+    margin-top: 7px;
+}
+
+.formHeader p{
+    font-size: 21px;
+    margin: 17px 0 32px 0px;
+}

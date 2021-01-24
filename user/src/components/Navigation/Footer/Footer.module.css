@@ -1,0 +1,30 @@
+.Footer{
+   padding: 30px 0;
+    background-color: #ac0464;
+    color: #fff;
+}
+.Footer p{
+    margin: 0;
+}
+
+ul.Social-Icons {
+    display: inline-block;
+    margin: 0 !important;
+}
+
+.SocialIcons  li{
+    display: inline-block;
+    margin: 0 13px;
+}
+
+.SocialIcons  li a i{
+    font-size: 20px;
+    line-height: 40px;
+    width: 40px;
+    margin: 0 auto;
+    border-radius: 50%;
+    color: #ac0464;
+    background: #fff;
+    text-align: center;
+    cursor: pointer;
+}

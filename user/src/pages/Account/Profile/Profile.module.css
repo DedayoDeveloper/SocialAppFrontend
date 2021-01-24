@@ -1,0 +1,144 @@
+.Banner{
+    background: linear-gradient(rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.28)), url('../../../assets/images/bgimg3.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px;
+    text-align: center;
+    margin: 0px 0 160px 0;
+}
+
+.Banner h1{
+    color: #fff;
+    padding-top: 55px;
+}
+
+.section{
+    margin: 10px 0 47px 0;
+}
+
+.section2{
+    margin: 50px 0 47px 0;
+}
+
+.form{
+    margin: 36px 0px;
+    width: 70%;
+}
+
+.Banner h1:after{
+    content: '';
+    width: 52px;
+    height: 4px;
+    text-align: center;
+    display: block;
+    margin: auto;
+    background: #fff;
+}
+.Bookings .header{
+    display: flex;
+    justify-content: space-between;
+    /* padding: 21px 0; */
+}
+
+.Bookings .header h1{
+    font-size: 22px;
+    color: #6b6b6b;
+    font-weight: 900;
+}
+.tab{
+    margin-top:20px;
+}
+
+
+
+@media screen and (max-width: 768px){
+    /* .Bookings .header{
+        margin: 80px 0 0 0;
+    } */
+    .Banner h1{
+        font-size: 20px;
+    }
+    section{
+        margin: 240px 0 47px 0;
+    }
+    .form{
+        
+        width: 100% !important;
+    }
+}
+
+.profileUpload{
+    text-align: center;
+    margin: 36px auto;
+}
+
+.profileUpload div{
+    height: 121px;
+    width: 121px;
+    overflow: hidden;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.profileUpload div img{
+    width: 100%;
+}
+.profileUpload button{
+    width: 50%;
+    margin-top: 21px;
+}
+
+.uploadDiv{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    margin: 33px 0;
+}
+
+.uploadDiv .item1{
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+}
+.uploadDiv .item1 img{
+    width: 100%;
+}
+
+.uploadDiv .item2 div{
+    padding: 16px 6px;
+    background: #dedbdb;
+}
+.uploadDiv .item2 div p{
+    font-weight: 700;
+}
+
+.uploadDiv .item2 button{
+    float: right;
+    margin-top: 8%;
+    cursor: pointer;
+    outline: 0;
+}
+
+.btnUpdate{
+    width: 100%;
+    padding: 11px 11px;
+    background: #2391d5;
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 900;
+    font-size: 19px;
+    border: none;
+}
+
+.btnUpdate:disabled{
+    cursor: not-allowed;
+    color: #ccc;
+    opacity: 0.7;
+    outline: 0;
+}
+.validationError{
+    color: red;
+    margin: -19px 0 14px 0;
+    font-size: 13px;
+
+}

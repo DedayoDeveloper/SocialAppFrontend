@@ -1,0 +1,35 @@
+.welcomeText h2{
+    color: #ffffff;
+    font-size: 55px;
+    line-height: 46px;
+    margin: 0 0 30px 0;
+    text-align: center;
+    font-family: 'Tangerine', cursive;
+}
+
+
+.welcomeText p{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.welcomeText a{
+    color: #ccc;
+    text-decoration: underline;
+}
+
+
+.section{
+    margin: 5px 0 0px 0;
+    background: #fcfcfc;
+    
+}
+
+.paybtn{
+    border: 1px solid #ccc;
+    background: #fff;
+    font-weight: 600;
+    padding: 6px 21px;
+    border-radius: 50px;
+}

@@ -1,0 +1,79 @@
+.mobileWrapper{
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto auto;
+    align-items: center;
+    background: #fff;
+    padding: 20px 13px;
+    box-shadow: 0px 10px 20px #00000010;
+    margin: 30px 0;
+}
+
+.mobileWrapper>div{
+    padding: 10px 10px;
+}
+
+.icon{
+    text-align: center;
+    margin: 0 auto;
+}
+
+.iconWrapper{
+    width: 30px;
+    height: 30px;
+    background: #2492d652;
+    border-radius: 50px;
+}
+
+.iconWrapper img{
+    width: 44%;
+    position: relative;
+    top: 5px;
+
+}
+.tripDestination{
+    display: flex;
+    padding: 12px 0 0px 0px !important;
+    align-items: center;
+
+}
+
+.tripDestination p{
+    margin: 0 6px;
+    font-size: 22px;
+    color: #707070;
+}
+
+.loaderDiv{
+    width: 100%;
+    background: #fff;
+    padding: 20px 13px;
+    box-shadow: 0px 10px 20px #00000010;
+    margin: 30px 0;
+}
+
+.payBtnOnBookings{
+    background: #2391d5;
+    color: #fff;
+    border: none;
+    /* padding-top: 7px; */
+    padding: 8px 13px 4px 13px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+@media  screen and (max-width:992px){
+    .mobileWrapper{
+        display: grid;
+    }
+}
+
+
+@media  screen and (min-width:992px){
+    .mobileWrapper{
+        display: none;
+    }
+    .loaderDiv{
+        display: none;
+    }
+}

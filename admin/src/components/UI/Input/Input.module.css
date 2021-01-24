@@ -1,0 +1,61 @@
+.Input {
+    width: 100%;
+    padding: 0px 0;
+    box-sizing: border-box;
+    margin-bottom: 26px;
+}
+
+.Label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #efe8e8;
+}
+
+.InputElement {
+    outline: none;
+    border: 1px solid #ccc;
+    background-color: white;
+    font: inherit;
+    padding: 10px 10px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.InputElement:focus {
+    outline: none;
+    background-color: #ccc;
+}
+
+.Invalid {
+    border: 1px solid red;
+    background-color: #f7d3cf;
+}
+
+.validationError{
+    color: red;
+    font-size: 13px;
+    padding: 5px 0;
+    margin: -20px 0 13px 0px;
+
+}
+
+.addon{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: .375rem .75rem;
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    /* border-radius: .25rem; */
+    height: 100%;
+}

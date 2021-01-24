@@ -1,0 +1,48 @@
+.introSection{
+    
+    padding: 200px 0;
+    text-align: center;
+}
+
+.introSection h1{
+    font-size: 79px;
+    color: #fff;
+    font-weight: 900;
+    font-family: 'Tangerine', cursive;
+}
+
+.introSection p{
+    color: #fff;
+    font-size: 21px;
+    margin: 10px 0;
+}
+
+.introSection button{
+    background: #ac0464;
+    outline: 0;
+    border: none;
+    color: #fff;
+    margin: 20px 0;
+    padding: 14px 0px;
+}
+.introSection button a{
+    text-decoration: none;
+    color: #fff;
+    padding: 14px 50px;
+}
+
+@media(max-width: 768px){
+    .introSection{
+    
+        padding: 100px 0;
+    }
+
+    .introSection h1{
+        font-size: 50px;
+    }
+    
+    .introSection p{
+        font-size: 16px;
+    }
+    
+}

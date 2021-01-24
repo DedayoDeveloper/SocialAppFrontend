@@ -1,0 +1,239 @@
+
+@font-face {
+  font-family: 'Manjari';
+  src: url('./assets/fonts/Manjari-Regular.eot'); /* IE9 Compat Modes */
+  src: url('./assets/fonts/Manjari-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./assets/fonts/Manjari-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('./assets/fonts/Manjari-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('./assets/fonts/Manjari-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+html, body{
+  height: 100%;
+margin: 0px;
+font-family: 'Nunito Sans', sans-serif;
+background: #F8F8F8;
+margin: 0;
+}
+#app {
+ display: flex;
+ flex-flow: column;
+ height: 100%;
+   
+}
+#app .navbar{
+  flex: 0 1 auto !important;
+
+    
+ }
+ #app .content{
+  flex:  1 1 auto;
+  margin-top: 52px;
+    
+ }
+ #app .footer{
+flex: 0 1 40px;
+    
+ }
+.navbar-expand-lg .navbar-collapse{
+  justify-content: flex-end;
+}
+
+li.nav-item {
+  margin: 0px 20px;
+}
+
+.navbar{
+  box-shadow: 0 4px 4px -4px rgba(0,0,0,0.12);
+}
+
+@media (min-width: 992px){
+.navbar-expand-lg {
+    
+  padding: 7px 70px;
+}
+
+
+
+}
+
+.navbar-light .navbar-toggler {
+  border: none;
+  outline: 0;
+}
+@media (max-width: 992px){
+.app-navbar{
+  display: none;
+}
+
+#app > main {
+  padding-top: 54px;
+}
+
+.navbar-nav .nav-item .active {
+  background: #fff;
+  color: #ac0464;
+}
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+  color: #ac0464;
+  border-bottom: 2px solid #ac0464;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: rgba(0,0,0,.5);
+  font-size: 15px;
+  font-weight: 900;
+  text-align: left;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  color: #ac0464;
+  background-color: transparent;
+  border-bottom: 2px solid #ac0464 !important;
+  border-color: transparent;
+}
+.nav-tabs .nav-item {
+  margin:0 30px -1px 0;
+  text-align: left;
+  flex-basis: unset;
+}
+
+.navbar-nav .nav-item a{
+  color: #fff;
+}
+
+
+.lamour-special-services {
+  padding: 76px 0 50px;
+  background: #171717;
+}
+.lamour-special-services .block-syl1 {
+  background: #2e2e2e;
+  margin-bottom: 40px;
+}
+.lamour-special-services .block-syl1 p {
+  color: #dad8d8;
+}
+.lamour-special-services .map-txt-block {
+    width: 100%;
+    float: left;
+    padding: 0px 0 0 40px;
+    min-height: 540px;
+}
+.lamour-special-services.home2 .map-txt-block {
+  min-height: 508px;
+}
+.lamour-special-services .map-txt-block>p {
+  padding: 0 10% 0 0;
+}
+.title1.stl2 h2 {
+  color: #dad8d8;
+}
+.title1.stl2 p {
+  color:#cec9c9;
+}
+.lamour-special-services p {
+  color: #858585;
+  font-size: 18px;
+    line-height: 1.538;
+}
+.lamour-special-services .title1 p {
+  padding: 0 40% 0 0;
+}
+
+.block-syl1 {
+  background: #fff;
+  border-radius: 10px;
+  padding: 40px 20px 40px;
+  text-align: center;
+  float: left;
+  width: 100%;
+}
+
+.block-syl1 i {
+  display: inline-block;
+  font-size: 30px;
+  line-height: 100px;
+  width: 100px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  color: #ffffff;
+}
+.block-syl1 p {
+  font-size: 20px;
+  font-weight: 400;
+  display: block;
+}
+.block-syl1 i {
+  background: #ac0464;
+}
+
+
+
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+    background: #f3f5f7;
+}
+.nav-tabs .nav-link {
+  color: #000;
+  text-align: left;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.app-error{
+  margin: 28px 0;
+  text-align: center;
+  background-color: #fce4e4;
+  border: 1px solid #fcc2c3;
+  /* float: left; */
+  padding: 11px 0px;
+  /* background: #ccc;*/
+}
+
+.app-error p{
+  color: #cc0033;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 20px;
+    text-shadow: 1px 1px rgba(250,250,250,.3);
+    margin: 0 !important;
+}
+
+.app-success{
+  margin: 28px 0;
+    text-align: center;
+    background-color: #cff9cf;
+    border: 1px solid #8fca91;
+    /* float: left; */
+    padding: 11px 0px;
+    /* background: #ccc;*/
+}
+.app-error p{
+  margin: 0 !important;
+}
+
+.react-datepicker-wrapper {
+
+  width: 100% !important;
+  
+}
+
+.react-datepicker__input-container {
+  
+  width: 100%;
+}
+
+.react-datepicker__input-container input{
+  
+  width: 100%;
+  color: hsl(0,0%,50%);
+  background-color: hsl(0,0%,100%);
+  border-color: hsl(0,0%,80%);
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  padding: 6px 9px;
+}

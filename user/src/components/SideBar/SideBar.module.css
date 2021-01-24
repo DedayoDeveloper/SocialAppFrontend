@@ -1,0 +1,142 @@
+.sidebarFixed {
+    height: 100%;
+    width: 29%;
+    position: fixed;
+    z-index: 1;
+    /* top: 0; */
+    /* right: 0; */
+    /* background-color: #111; */
+    overflow-x: hidden;
+    /* padding-top: 20px;*/
+  }
+
+  @media screen and (max-width: 768px){
+    .sidebarFixed{
+        height: 100%;
+        width: 100% !important;
+        position: initial !important;
+        margin-top: 36px;
+    }
+
+    .sidebarFixed2{
+        height: 100%;
+        width: 100% !important;
+        position: initial !important;
+        margin-top: 36px;
+    }
+}
+
+  .sidebarFixed2{
+    height: 100%;
+    /* width: 29%; */
+    position: sticky;
+    z-index: 1;
+    /* top: 0; */
+    /* right: 0; */
+    /* background-color: #111; */
+    overflow-x: hidden;
+    /* padding-top: 20px;*/
+  }
+
+
+.filter{
+    background: #fff;
+    padding: 23px 25px;
+    margin: 4px;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,.08), 0 2px 4px 0 rgba(0,0,0,.12);
+}
+.filter h4{
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 17px;
+}
+
+
+
+
+.accountSummary{
+    background: #fff;
+    padding: 23px 25px;
+    margin: 4px;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,.08), 0 2px 4px 0 rgba(0,0,0,.12);
+}
+.accountSummary h4{
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 17px;
+}
+.summaryGrid{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+}
+.summaryGrid span{
+    padding: 12px 0;
+    color: #6b6b6b;
+    font-size: 15px;
+}
+
+.bookTrip{
+    background: #fff;
+    padding: 23px 25px;
+    margin: 4px;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,.08), 0 2px 4px 0 rgba(0,0,0,.12);
+    margin-top: 20px;
+}
+
+.bookTrip h4{
+    font-size: 19px;
+    margin: 0px 0 29px 0;
+    font-weight: 700;
+}
+
+.tripForm{
+    width: 100%;
+    margin: 14px 0;
+}
+.tripForm input{
+    width: 100%;
+    padding: 7px 12px 4px 11px;
+    font-size: 14px;
+   
+}
+
+.tripForm select{
+    width: 100%;
+    padding: 13px 12px 8px 11px;
+    font-size: 14px;
+    border-radius: 0;
+}
+
+.tripForm label{
+    font-size: 14px;
+    color: #6b6b6b;
+}
+
+.pay{
+    background: #fff;
+    padding: 23px 25px;
+    margin: 4px;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,.08), 0 2px 4px 0 rgba(0,0,0,.12);
+    
+}
+
+.pay p{
+    color: #2492D6;
+    font-size: 15px;
+}
+
+.pay div{
+    background: #EDEDED 0% 0% no-repeat padding-box;
+    padding: 21px 0;
+    text-align: center;
+    margin: 11px 0;
+
+}
+
+.pay div h4{
+    color: #2492D6;
+    font-weight: 900;
+    font-size: 31px;
+
+}

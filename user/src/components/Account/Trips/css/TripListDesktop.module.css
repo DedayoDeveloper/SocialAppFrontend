@@ -1,0 +1,89 @@
+.wrapper{
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto auto auto auto;
+    /* justify-content: center; */
+    align-items: center;
+    background: #fff;
+    padding: 20px 0px;
+    box-shadow: 0px 10px 20px #00000010;
+    margin: 30px 0;
+}
+
+.icon{
+    text-align: center;
+    margin: 0 auto;
+}
+
+.iconWrapper{
+    width: 44px;
+    height: 38px;
+    background: #000;
+    border-radius: 5px;
+}
+
+.iconWrapper img{
+    width: 80%;
+    position: relative;
+    top: 6px;
+
+}
+
+.tripDestination, .tripStation{
+    display: flex;
+    margin: 6px 0px;
+
+}
+
+.tripDestination p{
+    margin: 0 7px;
+    font-size: 22px;
+    color: #707070;
+}
+
+.tripStation p{
+    margin: 0 5px;
+}
+
+p.time{
+    margin: 0 5px;
+    color: #2391d5;
+    font-size: 12px;
+}
+
+.price p{
+    font-size: 24px;
+    text-align: center;
+    color: #707070;
+}
+
+.price h6{
+    font-size: 14px;
+    color: green;
+    text-align: center;
+    font-weight: 700;
+}
+
+.PayInfo{
+    text-align: center;
+
+}
+
+.PayInfo p{
+    font-size: 15px;
+    color: #414ed8;
+}
+
+
+
+@media  screen and (max-width:992px){
+    .wrapper{
+        display: none;
+    }
+}
+
+@media  screen and (min-width:992px){
+    .wrapper{
+        display: grid;
+    }
+}

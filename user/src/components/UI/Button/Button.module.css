@@ -1,0 +1,129 @@
+
+
+.btnFull{
+    width: 100%;
+    padding: 11px 11px;
+    background: #ac0464;
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 900;
+    font-size: 19px;
+    border: none;
+}
+.btnPrev{
+    background: #fff;
+    border: 3px solid #ac0464;
+    margin: 0 11px 0 0;
+    width: 100%;
+    padding: 11px 11px;
+    text-transform: capitalize;
+    font-weight: 900;
+
+}
+
+.Button:disabled{
+    cursor: not-allowed;
+    color: #ccc;
+    opacity: 0.7;
+    outline: 0;
+}
+
+.Button{
+    outline: 0;
+}
+
+.tripSearch{
+    width: 100%;
+    padding: 8px 0 6px 0;
+    background: #ac0464;
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    outline: 0;
+}
+
+.tripSearch2{
+    width: 100%;
+    padding: 8px 0 6px 0;
+    /* background: #2391d5; */
+    color: #2391d5;
+    font-weight: 700;
+    border: 2px solid #2391d5;
+    border-style: dashed;
+    outline: 0;
+}
+.payBtnOnBookings{
+    background: #2391d5;
+    color: #fff;
+    border: none;
+    /* padding-top: 7px; */
+    padding: 8px 13px 4px 13px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.filterCancel{
+    width: 100%;
+    padding: 8px 0 6px 0;
+    background: transparent;
+    color: red;
+    font-weight: 700;
+    border: none;
+    outline: 0;
+}
+
+.photoUpload{
+    width: 100%;
+    padding: 8px 0 6px 0;
+    /* background: #2391d5; */
+    color: #ac0464;
+    font-weight: 700;
+    border: 2px solid #2391d5;
+    border-style: dashed;
+    outline: 0;
+}
+
+.saveUpload{
+    width: 100%;
+    padding: 8px 0 6px 0;
+    /* background: #2391d5; */
+    color: #2391d5;
+    font-weight: 700;
+    border: 2px solid #2391d5;
+    border-style: dashed;
+    outline: 0;
+}
+
+.paybutton{
+    width: 100%;
+    padding: 8px 0 6px 0;
+    background: #2391d5;
+    color: #fff;
+    font-weight: 700;
+    outline: 0;
+    border: none;
+   
+}
+
+.paybutton2{
+    width: 100%;
+    padding: 8px 0 6px 0;
+    background: #fff;
+    color: #2391d5;
+    font-weight: 700;
+    outline: 0;
+    border: 1px solid #2391d5;
+    margin: 20px 0;
+   
+}
+
+.verify{
+    width: 100%;
+    padding: 11px 11px;
+    background: #2391d5;
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 900;
+    font-size: 19px;
+    border:none;
+}

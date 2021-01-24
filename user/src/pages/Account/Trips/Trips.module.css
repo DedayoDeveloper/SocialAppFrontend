@@ -1,0 +1,126 @@
+.Banner{
+    background: linear-gradient(rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.28)), url('../../../assets/images/bgimg3.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px;
+    text-align: center;
+    margin: 0px 0 160px 0;
+}
+
+.Banner h1{
+    color: #fff;
+    padding-top: 55px;
+}
+
+.section{
+    margin: 10px 0 47px 0;
+}
+
+.section2{
+    margin: 50px 0 47px 0;
+}
+
+.Banner h1:after{
+    content: '';
+    width: 52px;
+    height: 4px;
+    text-align: center;
+    display: block;
+    margin: auto;
+    background: #fff;
+}
+.Bookings .header{
+    display: flex;
+    justify-content: space-between;
+    /* padding: 21px 0; */
+}
+
+.Bookings .header h1{
+    font-size: 22px;
+    color: #6b6b6b;
+    font-weight: 900;
+    text-transform: capitalize;
+}
+
+.Bookings .header2 h1{
+    font-size: 22px;
+    color: #6b6b6b;
+    font-weight: 900;
+    text-transform: capitalize;
+}
+.tab{
+    margin-top:20px;
+}
+
+
+
+@media screen and (max-width: 768px){
+    .Bookings .header{
+        margin: 80px 0 0 0;
+    }
+    .Banner h1{
+        font-size: 20px;
+    }
+    section{
+        margin: 240px 0 47px 0;
+    }
+    .notification{
+        margin: 101px 0 43px 0 !important;
+    }
+    .Bookings .header{
+        display: block !important;
+        margin: 108px 0 0 0 !important;
+        /* padding: 21px 0; */
+    }
+    .Bookings .header h1{
+        margin: 20px 0 !important;
+        text-align: center;
+    }
+}
+
+.notification{
+    margin: 11px 0;
+    background: #fff;
+    padding: 30px 0px;
+    box-shadow: 0px 10px 20px #00000010;
+}
+
+.innerFormWrapper{
+    background: #fff;
+    padding: 30px 0;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.input{
+    width: 100%;
+    outline: 0;
+    padding: 4px 7px;
+}
+
+.formWrapper{
+    position: relative;
+    top: 43px;
+    
+}
+
+.Button{
+    width: 100%;
+    padding: 8px 0 6px 0;
+    background: #2391d5;
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    outline: 0;
+}
+
+@media screen and (max-width: 768px){
+    .input{
+        width: 100%;
+        outline: 0;
+        padding: 11px 7px;
+        border-bottom: 2px solid #dcd3d3;
+        border-right: none;
+        border-left: none;
+        border-top: none;
+    }
+}
