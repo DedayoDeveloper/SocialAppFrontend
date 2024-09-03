@@ -36,7 +36,8 @@ export const NothingFound = nothingfound;
 
 
 // export const BASE_URL = 'https://polar-shore-83724.herokuapp.com/';
-export const BASE_URL = 'http://134.122.15.90:5050/';
+//export const BASE_URL = 'http://134.122.15.90:5050/';
+export const BASE_URL = 'http://localhost:5050/';
 
 export const ApiEndpoints = {
     
