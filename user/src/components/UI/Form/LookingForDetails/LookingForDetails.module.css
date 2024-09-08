@@ -1,0 +1,20 @@
+.data h1{
+    font-size: 1.7rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.data p{
+    font-size: 0.8rem;
+    color: silver;
+    text-align: center;
+}
+
+.boxes{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 10px; /* Space between the boxes */
+    justify-content: space-evenly;
+    width: 100%;    
+
+}

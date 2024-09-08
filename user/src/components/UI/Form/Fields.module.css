@@ -1,0 +1,153 @@
+
+
+.structure{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: large;
+    font-weight: 700;
+    
+
+
+}
+.structure label{
+    margin-bottom: 0.4rem;
+}
+.input{
+    border-radius: 0.3rem;
+    border: 1px solid #ccc;
+    width: 60%;
+    padding: 0.375rem; 
+    margin: 0 0 5px 0;
+    text-transform: capitalize;
+
+}
+
+.birthdayContainer{
+    display: flex;
+    margin: 0 0 5px 0;
+}
+
+.birthdaySpan{
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 12%; /* Makes each input take up an equal share of the space */
+    min-width: 0; /* Prevents overflow issues */
+}
+
+.birthdaySpan label{
+    margin-bottom: 0;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .birthdaySpan{
+        flex: 0 0 25%; 
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .birthdaySpan{
+        flex: 0 0 18%; 
+    }
+  }
+
+
+.birthdayInput{
+    border-radius: 0.3rem;
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 0.375rem 0.75rem; 
+    text-align: center; 
+    max-width: 80px;
+}
+
+.genderContainer{
+    display: flex;
+    gap: 0.8rem;
+    margin: 0 0 5px 0;
+}
+
+.gender{
+    border-radius: 1rem;
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 0.375rem 0.75rem; 
+    text-align: center; 
+    max-width: 150px;
+}
+
+.checkbox{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.4rem;
+    margin: 0 0 9px 0;
+
+}
+
+.checkbox input {
+    width: 20px; /* Adjust width as needed */
+    height: 20px;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    color: #fff;
+    position: relative;
+    border-radius: 7px;
+}
+.checkbox input:checked{
+    background-color: #ac0464!important;
+}
+
+.checkbox input:checked::after {
+    content: '✓'; /* Unicode checkmark */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: white; /* Color of the checkmark */
+    position: absolute;
+    top: -4px;
+    left: 3.5px;
+  }
+
+.checkbox p{
+    margin: 0;
+}
+
+.extras{
+}
+.extras button{
+    width: fit-content;
+    background-color: #F8F8F8;
+    font-weight: 700;
+
+}
+
+.intent{
+    border-radius: 1rem;
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 0.375rem 0.75rem; 
+    text-align: center; 
+    /* max-width: 150px;    */
+}
+
+.optional{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7rem;
+    margin-top: 3rem;
+}
+
+.optional span{
+    border-top: 1px solid #ccc;
+    width: 80%;
+    
+}
+.imageP{
+    margin-top: 1rem;
+    font-size: 16.5px;
+    font-weight: 400;
+    text-align: center;
+}

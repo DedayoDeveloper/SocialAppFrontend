@@ -1,0 +1,47 @@
+.imageBoxContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 10px; /* Space between the boxes */
+    justify-content: space-evenly;
+    justify-items: center;
+  }
+  
+  .box {
+    position: relative;
+    background-color: #e9ebee;
+    border-radius: 8px;
+    border: 2px dashed silver;
+    width: 200px;
+    height: 180px;
+  }
+
+  .uploadLabel{
+    position: absolute;
+    bottom: 0; /* Distance from the bottom */
+    right: 0;    
+    border: 1px solid #fff;
+    width: 30px;
+    height: 30px;
+    background-color: #ac0464;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0.2rem!important;
+    color: #fff;
+    cursor: pointer;
+  }
+  .uploadLabel p{
+    margin-bottom: 0;
+    font-size: 1.2rem!important;
+    font-weight: 700;
+
+    cursor: pointer;
+  }
+
+  .uploadedImage {
+    width: 120px;
+    height: 147px;  /* Maintains the aspect ratio */
+    object-fit: cover; /* Ensures the image covers the box while keeping aspect ratio */
+    border-radius: 8px;
+  }

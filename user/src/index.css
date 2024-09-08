@@ -8,6 +8,7 @@
        url('./assets/fonts/Manjari-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
+
 html, body{
   height: 100%;
 margin: 0px;
@@ -27,8 +28,12 @@ margin: 0;
     
  }
  #app .content{
-  flex:  1 1 auto;
-  margin-top: 52px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+  width: 100%;
+  height: 100%;
+
     
  }
  #app .footer{
