@@ -144,6 +144,18 @@ const formOne = {
         title: "What’s your first name?",
         info: "Can't change it later."
     },
+    lastname: {
+        title: "What’s your last name?",
+        info: "Can't change it later."
+    },
+    email: {
+        title: "What’s your email?",
+        info: "Can't change it later."
+    },
+    password: {
+        title: "What’s your password?",
+        info: "Of course you can change this 😃."
+    },
     birthday: {
         title: 'Your birthday?',
         info: 'Your profile shows your age not birthday.'

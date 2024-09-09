@@ -1,44 +1,48 @@
 
 
+
+.contain{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid orange; */
+
+}
+
+.contain input{
+    background-color: #e9ebee;
+    
+
+}
+
+.contain input::placeholder{
+    color: rgba(0,0,0,0.5);
+}
+
 .structure{
     display: flex;
     flex-direction: column;
-    width: 100%;
-    font-size: large;
-    font-weight: 700;
-    
-
-
 }
-.structure label{
-    margin-bottom: 0.4rem;
-}
-.input{
-    border-radius: 0.3rem;
-    border: 1px solid #ccc;
-    width: 60%;
-    padding: 0.375rem; 
-    margin: 0 0 5px 0;
+
+.input{    
     text-transform: capitalize;
 
 }
 
 .birthdayContainer{
-    display: flex;
-    margin: 0 0 5px 0;
+   display: grid;
+   grid-template-columns:  repeat(3, 1fr);
+   
 }
 
-.birthdaySpan{
-    display: flex;
-    flex-direction: column;
-    flex: 0 0 12%; /* Makes each input take up an equal share of the space */
-    min-width: 0; /* Prevents overflow issues */
-}
+
 
 .birthdaySpan label{
     margin-bottom: 0;
 }
-
+.labelContainer{
+    display: flex;
+    justify-content: space-between;
+}
 @media (min-width: 768px) and (max-width: 991.98px) {
     .birthdaySpan{
         flex: 0 0 25%; 
@@ -53,27 +57,23 @@
 
 
 .birthdayInput{
-    border-radius: 0.3rem;
-    border: 1px solid #ccc;
     width: 100%;
-    padding: 0.375rem 0.75rem; 
     text-align: center; 
-    max-width: 80px;
+    background-color: #e9ebee;
+
 }
 
+
 .genderContainer{
-    display: flex;
-    gap: 0.8rem;
-    margin: 0 0 5px 0;
+    display: grid;
+   grid-template-columns:  repeat(3, 1fr);
 }
 
 .gender{
-    border-radius: 1rem;
-    border: 1px solid #ccc;
+    border: 1px solid rgb(114, 117, 128);
     width: 100%;
-    padding: 0.375rem 0.75rem; 
     text-align: center; 
-    max-width: 150px;
+    cursor: pointer;
 }
 
 .checkbox{
@@ -91,23 +91,24 @@
     appearance: none;
     outline: none;
     cursor: pointer;
-    border: 1px solid #ccc;
+    background-color: #e9ebee;
+    border: 1px solid rgb(114, 117, 128);
     color: #fff;
     position: relative;
-    border-radius: 7px;
+    border-radius: 50%;
 }
 .checkbox input:checked{
     background-color: #ac0464!important;
 }
 
 .checkbox input:checked::after {
+    display: flex;
+    justify-content: space-around;   
+    align-items: center;
     content: '✓'; /* Unicode checkmark */
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     color: white; /* Color of the checkmark */
-    position: absolute;
-    top: -4px;
-    left: 3.5px;
   }
 
 .checkbox p{
@@ -124,12 +125,9 @@
 }
 
 .intent{
-    border-radius: 1rem;
-    border: 1px solid #ccc;
+    border: 1px solid rgb(114, 117, 128);
     width: 100%;
-    padding: 0.375rem 0.75rem; 
     text-align: center; 
-    /* max-width: 150px;    */
 }
 
 .optional{
@@ -141,7 +139,7 @@
 }
 
 .optional span{
-    border-top: 1px solid #ccc;
+    border: 1px solid rgb(114, 117, 128);
     width: 80%;
     
 }
@@ -150,4 +148,83 @@
     font-size: 16.5px;
     font-weight: 400;
     text-align: center;
+}
+
+.passwordContainer{
+    position: relative;
+    border: 1px solid rgb(114, 117, 128);
+    display: flex;
+    justify-content: space-between;
+    
+
+
+}
+
+.passwordContainer input{
+    border: none;
+    width: 100%;
+}
+.passwordContainer span{
+    position: absolute;
+    right: 0;
+    background-color: #e9ebee;
+    padding-right: 0.4rem;
+
+}
+
+
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+    button, input:checked{
+        background-color: #e9ebee;
+        transition: background-color 0.3s ease, transform 0.2s ease; 
+    
+    
+    }
+    
+    input:focus{
+        border: 1.5px solid #ac0464;
+        outline: none;
+        transition: border-color 0.3s ease;
+    }
+    button:active{
+        background-color: #ac0464;
+        color: #fff;
+        border: 1px solid #ac0464;
+    }
+    button:hover{
+        background-color: #ac0464;
+        color: #fff;
+        border: 1px solid #ac0464;
+        transform: scale(1.05);
+    }
+    .checkbox p{
+        font-size: 0.8rem;
+    }
+
+}
+
+@media only screen and (min-width: 1440px) and (max-width: 1919px) {
+    button, input:checked{
+        background-color: #e9ebee;
+        transition: background-color 0.3s ease, transform 0.2s ease; 
+    
+    
+    }
+    
+    input:focus{
+        border: 1.5px solid #ac0464;
+        outline: none;
+        transition: border-color 0.3s ease;
+    }
+    button:active{
+        background-color: #ac0464;
+        color: #fff;
+        border: 1px solid #ac0464;
+    }
+    button:hover{
+        background-color: #ac0464;
+        color: #fff;
+        border: 1px solid #ac0464;
+        transform: scale(1.05);
+    }
 }

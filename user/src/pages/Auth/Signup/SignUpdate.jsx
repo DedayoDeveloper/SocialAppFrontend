@@ -187,11 +187,15 @@ const SignUp = (props) => {
                     <div className={classes.topHalf}>   
                         <div className={classes.formContent}>
                             <Fields type={'name'} label='First name' />
+                            <Fields type={'name'} label={'Last name'}/>
                             <Fields type={'email'} label='Email' />
+                            <Fields type={'password'} label='Password'/>
                             <Fields label={'Birthday'} />
                             <Fields label={'Gender'} />
                             <Fields label={'Interested in'}/>
                             <Fields label={'Looking for'}/>
+                            <Fields label={'Interests'} />
+                            <Fields label={'Sexual Orientation'} />
                         </div>
 
                         <div className={classes.imageContent}>
@@ -200,13 +204,7 @@ const SignUp = (props) => {
                         </div>
                     </div>
 
-                    <div className={classes.extras}>
-                        <Fields label={'Optional'} />
-                        <Fields label={'Interests'} />
-                        <Fields label={'Sexual Orientation'} />
-                        
-                    </div>
-                
+            
                 </div>
 
             </div>

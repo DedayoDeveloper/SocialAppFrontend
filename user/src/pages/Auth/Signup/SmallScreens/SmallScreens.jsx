@@ -8,6 +8,7 @@ import Interests from './UI/Interests';
 import LookingFor from './UI/LookingFor';
 import Activities from './UI/Activities';
 import Photos from './UI/Photos/Photos';
+import Input from './UI/Input';
 
 
 const ProgressTracker = styled.div`
@@ -36,9 +37,11 @@ const Container = styled.div`
     }
     input{
         width: 100%;
-        border: 1px solid silver;
-        border-radius: 0.4rem;
+        border: 1px solid rgb(114, 117, 128);
         padding: 0.4rem;
+    }
+    input:focus{
+        border: 1.5px solid #ac0464;
     }
     p{
         margin: 0.8rem 0;
@@ -53,6 +56,7 @@ const ContentWrapper = styled.div`
   flex-direction: column;
   justify-content: flex-start; /* Align the content to the top */
   margin-top: 1rem; /* Add some margin from the top */
+ 
 `;
 
 const Button = styled.button`
@@ -60,18 +64,21 @@ const Button = styled.button`
     width: 100%;
     margin: 10px auto;
     padding: 0.5rem 1rem;
-    background-color: ${({isComplete}) => (isComplete ? '#ac0464': 'rgb(114, 117, 128)')};
-    color: white;
+    background-color: ${({ isComplete, disabled }) =>
+    disabled ? 'rgb(114, 117, 128)' : isComplete ? '#ac0464' : 'rgb(114, 117, 128)'};    color: white;
     border: none;
-    border-radius: 1.2rem;
     cursor: pointer;
-
+    &:focus{
+        outline: none
 `;
 
 const SmallScreens = () => {
     const [step, setStep] = useState(0);
     const [formData, setFormData] = useState({
         firstname: '',
+        lastname: '',
+        email: '',
+        password: '',
         birthday: '',
         gender: '',
         orientation: '',
@@ -83,7 +90,10 @@ const SmallScreens = () => {
     });
 
     const formFields = [
-        { name: 'firstname', label: formOne.firstname.title, description: formOne.firstname.info },
+        { name: 'firstname', label: formOne.firstname.title, type: 'name', description: formOne.firstname.info },
+        { name: 'lastname', label: formOne.lastname.title, type: 'name', description: formOne.lastname.info },
+        { name: 'email', label: formOne.email.title, type: 'email', description: formOne.email.info },
+        { name: 'password', label: formOne.password.title, type: 'password', description: formOne.password.info },
         { name: 'birthday', label: formOne.birthday.title, description: formOne.birthday.info },
         { name: 'gender', label: formOne.gender.title, description: formOne.gender.info },
         { name: 'orientation', label: formOne.orientation.title, description: formOne.orientation.info },
@@ -100,13 +110,19 @@ const SmallScreens = () => {
           [e.target.name]: e.target.value,
         });
     };
+    
 
     const handleNext = () => {
-        if (step < formFields.length - 1) {
-          setStep(step + 1);
-        } else {
-          alert('Form Submitted');
-        }
+        if (!formData[currentField.name]) {
+            alert(`Please fill in the ${currentField.label}.`);
+            return;
+          }
+          
+          if (step < formFields.length - 1) {
+            setStep(step + 1);
+          } else {
+            alert('Form Submitted');
+          }
     };
 
     const handlePrevious = () => {
@@ -117,8 +133,8 @@ const SmallScreens = () => {
 
     const currentField = formFields[step];
     const progressPercentage = ((step + 1) / formFields.length) * 100;
+    const isCurrentFieldEmpty = !formData[currentField.name]; // Check if the current field is empty
 
-    
     
   return (
     <>
@@ -131,12 +147,13 @@ const SmallScreens = () => {
             <ContentWrapper>
                 <div>
                     <h2 htmlFor={currentField.name}>{currentField.label}</h2>
-                    {currentField.name === 'firstname' && <input
+                    {currentField.type && <Input
                     id={currentField.name}
                     name={currentField.name}
-                    type={currentField.name === 'password' ? 'password' : 'text'}
+                    type={currentField.type}
                     value={formData[currentField.name]}
                     onChange={handleChange}
+                    required
                     />}
                     {currentField.name === 'birthday' && 
                     <Birthday
@@ -206,7 +223,7 @@ const SmallScreens = () => {
             
            
 
-            <Button onClick={handleNext} isComplete={step === formFields.length - 1}>
+            <Button onClick={handleNext} isComplete={step === formFields.length - 1}  disabled={isCurrentFieldEmpty} >
                 {step < formFields.length - 1 ? 'Next' : 'Submit'}
             </Button>
 

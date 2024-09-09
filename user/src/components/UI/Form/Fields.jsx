@@ -5,14 +5,56 @@ import Modal from '../Modal/Modal';
 import LookingForDetaiils from './LookingForDetails/LookingForDetails';
 import SexualOrientation from './SexualOrientation/SexualOrientation';
 import Interests from './Interests/Interests';
+import { FaEye, FaEyeSlash } from 'react-icons/fa'; // Import eye icons from react-icons
+import styled from 'styled-components';
+
+const PassStyle = styled.div`
+
+    position: relative;
+    border: ${({ click }) => (click ? '1.5px solid #ac0464' : '1px solid rgb(114, 117, 128)')};
+    display: flex;
+    justify-content: space-between;
+    
+
+    input{
+        border: none;
+        width: 100%;
+    }
+    span{
+        position: absolute;
+        right: 0;
+        background-color: #e9ebee;
+        padding-right: 0.4rem;
+
+    }
+`;
+
 
 const Fields = ({type, label}) => {
     const [isChecked, setIsChecked] = useState(false);
     const [clicked, setClicked] = useState(null);
+    const [password, setPassword] = useState(''); // State to manage password input value
+    const [passClick, setPassClick] = useState(false)
+    const [passwordVisible, setPasswordVisible] = useState(false);
+
+    const handleInputChange = (event) => {
+        const value = event.target.value;
+        setPassword(value);
+
+        // Change border color when typing
+    };
+    const handlePassClick = () => {
+        setPassClick(!passClick) 
+    };
+
 
     const handleCheckboxChange = (event) => {
       setIsChecked(event.target.checked);
       console.log("Checkbox checked:", event.target.checked); // To show current state in console
+    };
+
+    const togglePasswordVisibility = () => {
+        setPasswordVisible(!passwordVisible);
     };
 
     const [showModal, setShowModal] = useState(false); // State to control Modal visibility
@@ -50,9 +92,45 @@ const Fields = ({type, label}) => {
     
   return (
     <>
-        {type &&
+        {label === 'First name' &&
             (
-                <div className={classes.structure}>
+                    <div className={classes.contain}>
+                        <label htmlFor={type}>{label}</label>
+                        <input
+                            className={classes.input}
+                            type={type}
+                            id={type}
+                            name={type}
+                            placeholder={label}
+                            required
+                        />
+                </div>
+                
+
+            )
+        }
+
+        {label === 'Last name' &&
+            (
+                    <div className={classes.contain}>
+                        <label htmlFor={type}>{label}</label>
+                        <input
+                            className={classes.input}
+                            type={type}
+                            id={type}
+                            name={type}
+                            placeholder={label}
+                            required
+                        />
+                </div>
+                
+
+            )
+        }
+
+        {label === 'Email' &&
+            (
+                <div className={classes.contain}>
                     <label htmlFor={type}>{label}</label>
                     <input
                         className={classes.input}
@@ -62,12 +140,40 @@ const Fields = ({type, label}) => {
                         placeholder={label}
                         required
                     />
-
                 </div>
                 
 
             )
         }
+        
+        {label === 'Password' &&
+            (
+                    <div className={classes.contain}>
+                        <label htmlFor={type}>{label}</label>
+                        <PassStyle click={passClick} >
+
+                            <input
+                                className={classes.input}
+                                type={passwordVisible ? 'text' : 'password'}
+                                id={type}
+                                name={type}
+                                placeholder={label}
+                                onClick={handlePassClick}
+                                onChange={handleInputChange}
+                                required
+                            />
+                            <span onClick={togglePasswordVisibility}>
+                                {passwordVisible ? <FaEyeSlash /> : <FaEye />} {/* Conditionally render eye icons */}
+                            </span>
+                        </PassStyle>
+                        
+                </div>
+                
+
+            )
+        }
+
+
 
         {
             label === 'Birthday' &&
@@ -78,20 +184,20 @@ const Fields = ({type, label}) => {
                     <div className={classes.birthdayContainer}>
                         <span className={classes.birthdaySpan}>
                             {/* Day Input  */}
-                            <label htmlFor="day">Day</label>
+                            <label htmlFor="day"></label>
                             <input type="number" id="day" name="day" placeholder="DD" min="1" max="31" className={classes.birthdayInput} />
                         </span>
                         
                         <span className={classes.birthdaySpan}>
                             
                             {/* Month Input */}
-                            <label htmlFor="month">Month</label>
+                            <label htmlFor="month"></label>
                             <input type="number" id="month" name="month" placeholder="MM" min="1" max="12" className={classes.birthdayInput} />
                         </span>
                         
                         <span className={classes.birthdaySpan}>
                             {/* Year Input  */}
-                            <label htmlFor="year">Year</label>
+                            <label htmlFor="year"></label>
                             <input type="number" id="year" name="year" placeholder="YYYY" min="1900" max="2024" className={classes.birthdayInput} />
                         </span>
                     </div>
@@ -104,22 +210,25 @@ const Fields = ({type, label}) => {
             label === 'Gender' &&
             (
                 <div className={classes.structure}>
-                    <label htmlFor={type}>{label}</label>
+                    <div className={classes.labelContainer}>
+                        <label htmlFor={type}>{label}</label>
+                        <div className={classes.checkbox}>
+                            <input 
+                            type="checkbox" 
+                            checked={isChecked} 
+                            onChange={handleCheckboxChange} 
+                            />
+                            <p> Show my gender on my profile </p>
+                        </div>
+
+                    </div>
                     <div className={classes.genderContainer}>
-                        <span className={classes.gender}>Man</span>
-                        <span className={classes.gender}>Woman</span>
-                        <span className={classes.gender}>More &gt; </span>
+                        <button className={classes.gender}>Man</button>
+                        <button className={classes.gender}>Woman</button>
+                        <button className={classes.gender}>More &gt; </button>
                     </div>
                     
-                    <div className={classes.checkbox}>
-                        <input 
-                        type="checkbox" 
-                        checked={isChecked} 
-                        onChange={handleCheckboxChange} 
-                        />
-                        <p> Show my gender on my profile </p>
-                     </div>
-
+                    
                 </div>
 
             )
@@ -131,9 +240,9 @@ const Fields = ({type, label}) => {
                 <div className={classes.structure}>
                     <label htmlFor={type}>{label}</label>
                     <div className={`${classes.genderContainer}`}>
-                        <span className={classes.gender}>Men</span>
-                        <span className={classes.gender}>Women</span>
-                        <span className={classes.gender}>Everyone </span>
+                        <button className={classes.gender}>Men</button>
+                        <button className={classes.gender}>Women</button>
+                        <button className={classes.gender}>Everyone </button>
                     </div>
 
                 </div>
@@ -146,51 +255,22 @@ const Fields = ({type, label}) => {
             (
                 <div className={classes.structure}>
                     <label htmlFor={type}>{label}</label>
-                    <div className={classes.extras}>
-                        <button value='lookingfor' className={classes.intent} onClick={openModalHandler}> + Add relationship intent</button>
-
-                    </div>
+                    <button value="lookingfor" className={classes.intent} onClick={openModalHandler}> + Add relationship intent</button>
 
                 </div>
 
             )
         }
 
-        {
-            label === 'Optional' &&
-            (
-                <div className={classes.optional}>
-                    <span></span>
-                    {label}
-                    <span></span>
-                </div>
-            )
-           
-        }
-
-        {
-            label === 'Profile Photos' &&
-            (
-                <div className={classes.structure}>
-                    <label htmlFor={type}>{label}</label>
-                    <ImageBox amount={6} />
-
-                    <p className={classes.imageP}>Upload 2 photos to start. Add 4 more to make <br/>your profile stand out </p>
-
-                </div>
-
-            )
-        }
+   
 
         {       
             label === 'Interests' &&
             (
                 <div className={classes.structure}>
                     <label htmlFor={type}>{label}</label>
-                    <div className={classes.extras}>
                         <button value="interests" className={classes.intent} onClick={openModalHandler}> + Interests</button>
                         
-                    </div>
 
                 </div>
 
@@ -202,9 +282,21 @@ const Fields = ({type, label}) => {
             (
                 <div className={classes.structure}>
                     <label htmlFor={type}>{label}</label>
-                    <div className={classes.extras}>
                         <button value="orientation" className={classes.intent} onClick={openModalHandler}> + Sexual Orientation</button>
-                    </div>
+
+                </div>
+
+            )
+        } 
+
+        {
+            label === 'Profile Photos' &&
+            (
+                <div className={classes.structure}>
+                    <label htmlFor={type}>{label}</label>
+                    <ImageBox amount={6} />
+
+                    <p className={classes.imageP}>Upload 2 photos to start. Add 4 more to make <br/>your profile stand out </p>
 
                 </div>
 

@@ -1,18 +1,31 @@
+input{
+  background-color: #f8f8f8f8;
+  border: 1px solid rgb(114, 117, 128);
+}
+
 .imageBoxContainer {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
     gap: 10px; /* Space between the boxes */
     justify-content: space-evenly;
+    justify-items: center;
   }
   
   .box {
     position: relative;
     background-color: #e9ebee;
     border-radius: 8px;
-    border: 2px dashed silver;
-    width: 115px;
-    height: 150px;
+    border: 1px dashed rgb(114, 117, 128);
+    width: 180px;
+    height: 180px;
   }
+
+  @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+    .box {
+      width: 120px;
+      height: 120px;
+    }  }
+  
 
   .uploadLabel{
     position: absolute;
@@ -36,8 +49,8 @@
   }
 
   .uploadedImage {
-    width: 120px;
-    height: 147px;  /* Maintains the aspect ratio */
+    width: 180px;
+    height: 180px;  /* Maintains the aspect ratio */
     object-fit: cover; /* Ensures the image covers the box while keeping aspect ratio */
     border-radius: 8px;
   }
