@@ -51,7 +51,6 @@ const Fields = ({type, label}) => {
 
     const handleCheckboxChange = (event) => {
       setIsChecked(event.target.checked);
-      console.log("Checkbox checked:", event.target.checked); // To show current state in console
     };
 
     const togglePasswordVisibility = () => {
@@ -63,13 +62,10 @@ const Fields = ({type, label}) => {
     // Function to open the Modal
     const openModalHandler = (event) => {
         const value = event.target.value;
-        console.log(value);
         switch (value) {
             case 'lookingfor':
-                console.log(value);
                 setClicked(value);
                 setShowModal(true);
-                console.log(clicked);
 
                 break;
             case 'interests':

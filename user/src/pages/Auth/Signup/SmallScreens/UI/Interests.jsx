@@ -59,7 +59,6 @@ const Interests = () => {
 
     const handleCheckboxChange = (event) => {
       setIsChecked(event.target.checked);
-      console.log("Checkbox checked:", event.target.checked); // To show current state in console
     };
   return (
     <Container isSelected={selected !== null}>

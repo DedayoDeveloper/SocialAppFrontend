@@ -76,7 +76,6 @@ const Interests = ({modalClosed}) => {
 
     const handleSave = () => {
         // Handle the save action here
-        console.log('Saved box indexes:', selectedInterests);
         modalClosed();
         // You can perform further actions like submitting the selected box data
     };

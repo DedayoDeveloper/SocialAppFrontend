@@ -56,7 +56,6 @@ const SignUp = (props) => {
         SERVER_REQUEST(ApiEndpoints.GET_ESCORT_CATEGORIES, 'get')
             .then((data) => {
                 if (data.error == null && !data.error) {
-                    console.log(data);
                 }
             })
             .catch((error) => {

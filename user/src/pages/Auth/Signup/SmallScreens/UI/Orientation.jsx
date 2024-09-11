@@ -71,7 +71,6 @@ const Orientation = () => {
 
     const handleCheckboxChange = (event) => {
       setIsChecked(event.target.checked);
-      console.log("Checkbox checked:", event.target.checked); // To show current state in console
     };
 
     const handleClick = (index) => {

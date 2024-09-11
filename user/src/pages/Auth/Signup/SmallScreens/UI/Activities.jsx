@@ -29,7 +29,6 @@ const Activities = ({ activitiesData, selectedActivities, onSelectActivity, type
     onSelectActivity(index, type); // Call parent function to manage selection
   };
 
-  console.log(activitiesData)
 
   return (
     <Container>
