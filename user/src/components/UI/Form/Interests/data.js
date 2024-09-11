@@ -1,4 +1,4 @@
-const data = [
+const hobbies = [
     { data: "movies"},
     { data: "music"},
     { data: "theatre"},
@@ -29,4 +29,14 @@ const data = [
     { data: "comedy"}
 ];
 
-export {data}
+const interests = [
+    { data: "movies"},
+    { data: "music"},
+    { data: "theatre"},
+    { data: "entertainment"},
+    { data: "news"},
+    { data: "sports"},
+    { data: "politics "}
+];
+
+export {interests, hobbies}

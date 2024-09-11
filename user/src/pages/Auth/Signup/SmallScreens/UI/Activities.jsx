@@ -1,62 +1,52 @@
-import React, { useState } from 'react'
-import styled from 'styled-components'
-import { data } from '../../../../../components/UI/Form/Interests/data';
+import React, { useState } from 'react';
+import styled from 'styled-components';
 
 const Container = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
+
 const Items = styled.div`
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    gap: 10px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 10px;
 `;
 
 const Span = styled.span`
-    width: fit-content;
-    border: 1px solid silver;
-    padding: 0.2rem;
-    border-radius: 0.4rem;
-    color: ${({ isSelected }) => (isSelected ? '#fff' : 'silver')};
-    background-color: ${({ isSelected }) => (isSelected ? '#ac0464' : 'transparent')};
-
+  width: fit-content;
+  border: 1px solid silver;
+  padding: 0.2rem;
+  border-radius: 0.4rem;
+  color: ${({ isSelected }) => (isSelected ? '#fff' : 'silver')};
+  background-color: ${({ isSelected }) => (isSelected ? '#ac0464' : 'transparent')};
+  cursor: pointer;
 `;
 
-const Activities = () => {
-    const [count, setCount] = useState(0);
-    const [selectedInterests, setSelectedInterests] = useState([]); 
+const Activities = ({ activitiesData, selectedActivities, onSelectActivity, type }) => {
+  const handleClick = (index) => {
+    onSelectActivity(index, type); // Call parent function to manage selection
+  };
 
-    const handleClick = (index) => {
-        if (selectedInterests.includes(index)) {
-          // Deselect if already selected
-          setSelectedInterests(selectedInterests.filter((i) => i !== index));
-        } else if (selectedInterests.length < 5) {
-          // Only allow adding if less than 5 are selected
-          setCount(count+1)
-          setSelectedInterests([...selectedInterests, index]);
-        }
-    };
+  console.log(activitiesData)
+
   return (
     <Container>
-        <Items>
-            {data.map((item,index)=>
-            (
-                <Span 
-                key={index}
-                onClick={() => handleClick(index)}
-                isSelected={selectedInterests.includes(index)}
-                isDisabled={selectedInterests.length === 3 && !selectedInterests.includes(index)}
-                >{item.data}</Span>
-            )
-        )}
-        </Items>
-        
-      
+      <Items>
+        {activitiesData.map((item, index) => (
+          <Span
+            key={index}
+            onClick={() => handleClick(index)}
+            isSelected={selectedActivities.includes(index)}
+            isDisabled={selectedActivities.length >= 4 && !selectedActivities.includes(index)}
+          >
+            {item.data}
+          </Span>
+        ))}
+      </Items>
     </Container>
-  )
-}
+  );
+};
 
-export default Activities
+export default Activities;

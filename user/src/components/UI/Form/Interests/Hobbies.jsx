@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {interests} from './data';
+import {hobbies, interests} from './data';
 import styled from 'styled-components';
 
 
@@ -55,11 +55,9 @@ const Span = styled.span`
     cursor: pointer;
     color: ${({ isSelected }) => (isSelected ? '#fff' : 'silver')};
     background-color: ${({ isSelected }) => (isSelected ? '#ac0464' : 'none')};
-
-
 `;
 
-const Interests = ({modalClosed}) => {
+const Hobbies = ({modalClosed}) => {
     const [count, setCount] = useState(0);
     const [selectedInterests, setSelectedInterests] = useState([]); 
 
@@ -84,10 +82,10 @@ const Interests = ({modalClosed}) => {
   return (
     <Details>
         <h1>What are you into?</h1>
-        <p>Give us up to 5 of your interests, let's personalise things for you</p>
+        <p>Give us up to 5 of your hobbies, let's personalise things for you</p>
 
         <Items>
-            {interests.map((item,index)=>
+            {hobbies.map((item,index)=>
             (
                 <Span 
                 key={index}
@@ -108,4 +106,4 @@ const Interests = ({modalClosed}) => {
   )
 }
 
-export default Interests
+export default Hobbies

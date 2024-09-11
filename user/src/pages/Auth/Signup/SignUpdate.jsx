@@ -188,14 +188,16 @@ const SignUp = (props) => {
                         <div className={classes.formContent}>
                             <Fields type={'name'} label='First name' />
                             <Fields type={'name'} label={'Last name'}/>
+                            <Fields type={'name'} label={'Username'}/>
                             <Fields type={'email'} label='Email' />
+                            <Fields type={'phone'} label='Phone number' />
                             <Fields type={'password'} label='Password'/>
-                            <Fields label={'Birthday'} />
+                            <Fields label={'Date of Birth'} />
                             <Fields label={'Gender'} />
                             <Fields label={'Interested in'}/>
                             <Fields label={'Looking for'}/>
                             <Fields label={'Interests'} />
-                            <Fields label={'Sexual Orientation'} />
+                            <Fields label={'Hobbies'} />
                         </div>
 
                         <div className={classes.imageContent}>

@@ -7,6 +7,7 @@ import SexualOrientation from './SexualOrientation/SexualOrientation';
 import Interests from './Interests/Interests';
 import { FaEye, FaEyeSlash } from 'react-icons/fa'; // Import eye icons from react-icons
 import styled from 'styled-components';
+import Hobbies from './Interests/Hobbies';
 
 const PassStyle = styled.div`
 
@@ -75,7 +76,7 @@ const Fields = ({type, label}) => {
                 setClicked(value);
                 setShowModal(true);
                 break;
-            case 'orientation':
+            case 'hobbies':
                 setClicked(value);
                 setShowModal(true);
               break;
@@ -127,8 +128,43 @@ const Fields = ({type, label}) => {
 
             )
         }
+        {label === 'Username' &&
+            (
+                <div className={classes.contain}>
+                    <label htmlFor={type}>{label}</label>
+                    <input
+                        className={classes.input}
+                        type={type}
+                        id={type}
+                        name={type}
+                        placeholder={label}
+                        required
+                    />
+                </div>
+                
+
+            )
+        }
 
         {label === 'Email' &&
+            (
+                <div className={classes.contain}>
+                    <label htmlFor={type}>{label}</label>
+                    <input
+                        className={classes.input}
+                        type={type}
+                        id={type}
+                        name={type}
+                        placeholder={label}
+                        required
+                    />
+                </div>
+                
+
+            )
+        }
+
+        {label === 'Phone number' &&
             (
                 <div className={classes.contain}>
                     <label htmlFor={type}>{label}</label>
@@ -176,7 +212,7 @@ const Fields = ({type, label}) => {
 
 
         {
-            label === 'Birthday' &&
+            label === 'Date of Birth' &&
             (
                 <div className={classes.structure}>
                     
@@ -234,7 +270,7 @@ const Fields = ({type, label}) => {
             )
         }
 
-        {       
+        {/* {       
             label === 'Interested in' &&
             (
                 <div className={classes.structure}>
@@ -248,9 +284,9 @@ const Fields = ({type, label}) => {
                 </div>
 
             )
-        }
+        } */}
 
-         {       
+         {/* {       
             label === 'Looking for' &&
             (
                 <div className={classes.structure}>
@@ -260,7 +296,7 @@ const Fields = ({type, label}) => {
                 </div>
 
             )
-        }
+        } */}
 
    
 
@@ -278,11 +314,11 @@ const Fields = ({type, label}) => {
         }
 
         {       
-            label === 'Sexual Orientation' &&
+            label === 'Hobbies' &&
             (
                 <div className={classes.structure}>
                     <label htmlFor={type}>{label}</label>
-                        <button value="orientation" className={classes.intent} onClick={openModalHandler}> + Sexual Orientation</button>
+                        <button value="hobbies" className={classes.intent} onClick={openModalHandler}> + Hobbies</button>
 
                 </div>
 
@@ -306,7 +342,7 @@ const Fields = ({type, label}) => {
     <Modal show={showModal} modalClosed={closeModalHandler}>
         {clicked === 'lookingfor' && <LookingForDetaiils modalClosed={closeModalHandler} />}
         {clicked === 'interests' && <Interests modalClosed={closeModalHandler} />}
-        {clicked === 'orientation' && <SexualOrientation modalClosed={closeModalHandler} />}
+        {clicked === 'hobbies' && <Hobbies modalClosed={closeModalHandler} />}
 
         
     </Modal>

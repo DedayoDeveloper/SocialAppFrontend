@@ -9,6 +9,7 @@ import LookingFor from './UI/LookingFor';
 import Activities from './UI/Activities';
 import Photos from './UI/Photos/Photos';
 import Input from './UI/Input';
+import {hobbies, interests } from '../../../../components/UI/Form/Interests/data';
 
 
 const ProgressTracker = styled.div`
@@ -74,17 +75,19 @@ const Button = styled.button`
 
 const SmallScreens = () => {
     const [step, setStep] = useState(0);
+    
     const [formData, setFormData] = useState({
         firstname: '',
         lastname: '',
+        username: '',
         email: '',
+        phone: '',
         password: '',
-        birthday: '',
+        birthday: { day: '', month: '', year: '' },
         gender: '',
-        orientation: '',
-        interests: '',
-        lookingfor: '',
-        activities: '',
+        showGender: false,
+        interests: [],
+        hobbies: [],
         photos: ''
 
     });
@@ -92,14 +95,16 @@ const SmallScreens = () => {
     const formFields = [
         { name: 'firstname', label: formOne.firstname.title, type: 'name', description: formOne.firstname.info },
         { name: 'lastname', label: formOne.lastname.title, type: 'name', description: formOne.lastname.info },
+        { name: 'username', label: formOne.username.title, type: 'name', description: formOne.username.info },
         { name: 'email', label: formOne.email.title, type: 'email', description: formOne.email.info },
+        { name: 'phone', label: formOne.phone.title, type: 'phone', description: formOne.phone.info },
         { name: 'password', label: formOne.password.title, type: 'password', description: formOne.password.info },
         { name: 'birthday', label: formOne.birthday.title, description: formOne.birthday.info },
         { name: 'gender', label: formOne.gender.title, description: formOne.gender.info },
-        { name: 'orientation', label: formOne.orientation.title, description: formOne.orientation.info },
+        // { name: 'orientation', label: formOne.orientation.title, description: formOne.orientation.info },
         { name: 'interests', label: formOne.interests.title, description: formOne.interests.info },
-        { name: 'lookingfor', label: formOne.lookingfor.title, description: formOne.lookingfor.info },
-        { name: 'activities', label: formOne.activities.title, description: formOne.activities.info },
+        // { name: 'lookingfor', label: formOne.lookingfor.title, description: formOne.lookingfor.info },
+        { name: 'hobbies', label: formOne.hobbies.title, description: formOne.hobbies.info },
         { name: 'photos', label: formOne.photos.title, description: formOne.photos.info },
 
     ];
@@ -110,6 +115,54 @@ const SmallScreens = () => {
           [e.target.name]: e.target.value,
         });
     };
+
+    // Handler for birthday fields
+    const handleBirthdayChange = (field, value) => {
+        setFormData({
+        ...formData,
+        birthday: {
+            ...formData.birthday,
+            [field]: value,
+        },
+        });
+    };
+
+    // Handler for gender fields
+    const handleGenderChange = (gender) => {
+        setFormData({ ...formData, gender });
+    };
+
+    const handleShowGenderChange = (showGender) => {
+        setFormData({ ...formData, showGender });
+    };
+
+    const handleActivitiesChange = (index, type) => {
+
+        {type === 'interests' &&
+        setFormData((prevFormData) => {
+          const isSelected = prevFormData.interests.includes(index);
+          const updatedActivities = isSelected
+            ? prevFormData.interests.filter((i) => i !== index) // Remove if selected
+            : prevFormData.interests.length < 5
+            ? [...prevFormData.interests, index] // Add if less than 5 selected
+            : prevFormData.interests; // No change if already 5 selected
+    
+          return { ...prevFormData, interests: updatedActivities };
+        })};
+
+        {type === 'hobbies' &&
+        setFormData((prevFormData) => {
+          const isSelected = prevFormData.hobbies.includes(index);
+          const updatedActivities = isSelected
+            ? prevFormData.hobbies.filter((i) => i !== index) // Remove if selected
+            : prevFormData.hobbies.length < 5
+            ? [...prevFormData.hobbies, index] // Add if less than 5 selected
+            : prevFormData.hobbies; // No change if already 5 selected
+    
+          return { ...prevFormData, hobbies: updatedActivities };
+        })};
+      
+      };
     
 
     const handleNext = () => {
@@ -159,17 +212,17 @@ const SmallScreens = () => {
                     <Birthday
                     id={currentField.name}
                     name={currentField.name}
-                    value={formData[currentField.name]}
-                    onChange={handleChange}
+                    value={formData.birthday}  
+                    onChange={handleBirthdayChange} 
 
                     />}
 
                     {currentField.name === 'gender' && 
                     <Gender
-                    id={currentField.name}
-                    name={currentField.name}
-                    value={formData[currentField.name]}
-                    onChange={handleChange}
+                    selectedGender={formData.gender}
+                    onGenderChange={handleGenderChange}
+                    showGender={formData.showGender}
+                    onShowGenderChange={handleShowGenderChange}
 
                     />}
 
@@ -183,27 +236,27 @@ const SmallScreens = () => {
                     />}
 
                     {currentField.name === 'interests' && 
-                    <Interests
-                    id={currentField.name}
-                    name={currentField.name}
-                    value={formData[currentField.name]}
-                    onChange={handleChange}
+                    <Activities
+                    type='interests'
+                    activitiesData={interests}
+                    selectedActivities={formData.interests}
+                    onSelectActivity={handleActivitiesChange}
                     />}
 
-                    {currentField.name === 'lookingfor' && 
+                    {/* {currentField.name === 'lookingfor' && 
                     <LookingFor
                     id={currentField.name}
                     name={currentField.name}
                     value={formData[currentField.name]}
                     onChange={handleChange}
-                    />}
+                    />} */}
 
-                    {currentField.name === 'activities' && 
+                    {currentField.name === 'hobbies' && 
                     <Activities
-                    id={currentField.name}
-                    name={currentField.name}
-                    value={formData[currentField.name]}
-                    onChange={handleChange}
+                    type='hobbies'
+                    activitiesData={hobbies}
+                    selectedActivities={formData.hobbies}
+                    onSelectActivity={handleActivitiesChange}
                     />}
 
                     {currentField.name === 'photos' && 

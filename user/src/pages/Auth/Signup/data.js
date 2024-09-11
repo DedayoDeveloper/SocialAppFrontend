@@ -148,9 +148,17 @@ const formOne = {
         title: "What’s your last name?",
         info: "Can't change it later."
     },
+    username: {
+        title: "What’s your username?",
+        info: "Can't change it later."
+    },
     email: {
         title: "What’s your email?",
         info: "Can't change it later."
+    },
+    phone: {
+        title: "What’s your phone number?",
+        info: "Just for otp's and authentication."
     },
     password: {
         title: "What’s your password?",
@@ -167,15 +175,16 @@ const formOne = {
         title: "What's your sexual orientation?"
     },
     interests: {
-        title: "Who are you interested in seeing?",
+        title: "Who are your interests?",
+        info: "Select up to 5"
     },
     lookingfor: {
         title: "What are you looking for?",
         info: "There is something for everyone."
     },
-    activities:{
+    hobbies:{
         title: "What are you into?",
-        info: "Let people know what you enjoy."
+        info: "Select up to 5"
     },
     photos: {
         title: "Add your recent pictures",
