@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import './App.css';
 import Layout from './components/Layout/Layout'
 import { Route, Switch , withRouter, Redirect} from 'react-router-dom';
 import Landing from './pages/Landing';
 import Login from './pages/Auth/Login/Login'
 import SignUp from './pages/Auth/Signup/SignUp'
+import SignUpdate from './pages/Auth/Signup/SignUpdate.jsx'
 import Dashboard from './pages/Account/Dashboard/Dashboard'
 import {Loading, RouteGuard} from './router'
 import {connect} from 'react-redux';
@@ -27,7 +27,7 @@ const routes = [
   },
   {
     path: "/sign-up",
-    component: SignUp,
+    component: SignUpdate,
     guarded: false,
   },
   {

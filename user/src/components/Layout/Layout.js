@@ -29,7 +29,7 @@ render(){
 
         <div className="content">
             <SideDrawer logout={this.props.logOut} username={this.props.userData.fullname} isVerify={this.props.isVerify}  isAuth={this.props.isAuth} open={this.state.showSideDrawer} closeDrawer={this.closeSideDrawerHandler}/>
-            <main className={classes.Content}>
+            <main className={classes.main}>
                 {this.props.children}
             </main>
         </div>

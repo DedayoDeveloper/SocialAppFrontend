@@ -1,0 +1,56 @@
+input{
+  background-color: #f8f8f8f8;
+  border: 0.06rem solid rgb(114, 117, 128);
+}
+
+.imageBoxContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 1rem; /* Space between the boxes */
+    justify-content: space-evenly;
+    justify-items: center;
+  }
+  
+  .box {
+    position: relative;
+    background-color: #e9ebee;
+    border-radius: 0.5rem;
+    border: 0.06rem dashed rgb(114, 117, 128);
+    width: 11.25rem;
+    height: 11.25rem;
+  }
+
+  @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+    .box {
+      width: 7.5rem;
+      height: 7.5rem;
+    }  }
+  
+
+  .uploadLabel{
+    position: absolute;
+    bottom: 0; /* Distance from the bottom */
+    right: 0;    
+    border: 0.06rem solid #fff;
+    width: 1.9rem;
+    height: 1.9rem;
+    background-color: #ac0464;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 0 0.2rem;
+    color: #fff;
+    font-size: 1.3rem;
+    cursor: pointer;
+  }
+  .uploadLabel p{
+    margin-bottom: 0;
+    cursor: pointer;
+  }
+
+  .uploadedImage {
+    width: 11.25rem;
+    height: 11.25rem;  /* Maintains the aspect ratio */
+    object-fit: cover; /* Ensures the image covers the box while keeping aspect ratio */
+    border-radius: 0.5rem;
+  }

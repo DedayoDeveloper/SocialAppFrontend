@@ -1,0 +1,232 @@
+
+
+
+.contain{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid orange; */
+
+}
+
+.contain input, .birthdaySpan input{
+    background-color: #e9ebee;
+    border: 1px solid rgb(114, 117, 128);
+    
+
+}
+
+.contain input::placeholder{
+    color: rgba(0,0,0,0.5);
+}
+
+.structure{
+    display: flex;
+    flex-direction: column;
+}
+
+.input{    
+    text-transform: capitalize;
+    border-color: rgb(114, 117, 128)
+
+}
+
+.birthdayContainer{
+   display: grid;
+   grid-template-columns:  repeat(3, 1fr);
+   
+}
+
+
+
+.birthdaySpan label{
+    margin-bottom: 0;
+}
+.labelContainer{
+    display: flex;
+    justify-content: space-between;
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .birthdaySpan{
+        flex: 0 0 25%; 
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .birthdaySpan{
+        flex: 0 0 18%; 
+    }
+  }
+
+
+.birthdayInput{
+    width: 100%;
+    text-align: center; 
+    background-color: #e9ebee;
+
+}
+
+
+.genderContainer{
+    display: grid;
+   grid-template-columns:  repeat(3, 1fr);
+}
+
+.gender{
+    border: 1px solid rgb(114, 117, 128);
+    width: 100%;
+    text-align: center; 
+    cursor: pointer;
+}
+
+.checkbox{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.4rem;
+    margin: 0 0 9px 0;
+
+}
+
+.checkbox input {
+    width: 1.25rem; /* Adjust width as needed */
+    height: 1.25rem;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #e9ebee;
+    border: 1px solid rgb(114, 117, 128);
+    color: #fff;
+    position: relative;
+    border-radius: 50%;
+}
+.checkbox input:checked{
+    background-color: #ac0464!important;
+}
+
+.checkbox input:checked::after {
+    display: flex;
+    justify-content: space-around;   
+    align-items: center;
+    content: '✓'; /* Unicode checkmark */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    color: white; /* Color of the checkmark */
+  }
+
+.checkbox p{
+    margin: 0;
+}
+
+.extras{
+}
+.extras button{
+    width: fit-content;
+    background-color: #F8F8F8;
+    font-weight: 700;
+
+}
+
+.intent{
+    border: 1px solid rgb(114, 117, 128);
+    width: 100%;
+    text-align: center; 
+}
+
+.optional{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7rem;
+    margin-top: 3rem;
+}
+
+.optional span{
+    border: 1px solid rgb(114, 117, 128);
+    width: 80%;
+    
+}
+.imageP{
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.passwordContainer{
+    position: relative;
+    border: 1px solid rgb(114, 117, 128);
+    display: flex;
+    justify-content: space-between;
+    
+
+
+}
+
+.passwordContainer input{
+    border: none;
+    width: 100%;
+}
+.passwordContainer span{
+    position: absolute;
+    right: 0;
+    background-color: #e9ebee;
+    padding-right: 0.4rem;
+
+}
+
+
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+    button, input:checked{
+        background-color: #e9ebee;
+        transition: background-color 0.3s ease, transform 0.2s ease; 
+    
+    
+    }
+    
+    input:focus{
+        border: 1.5px solid #ac0464;
+        outline: none;
+        transition: border-color 0.3s ease;
+    }
+    button:active{
+        background-color: #ac0464;
+        color: #fff;
+        border: 1px solid #ac0464;
+    }
+    button:hover{
+        background-color: #ac0464;
+        color: #fff;
+        border: 1px solid #ac0464;
+        transform: scale(1.05);
+    }
+    .checkbox p{
+        font-size: 0.8rem;
+    }
+
+}
+
+@media only screen and (min-width: 1440px) and (max-width: 1919px) {
+    button, input:checked{
+        background-color: #e9ebee;
+        transition: background-color 0.3s ease, transform 0.2s ease; 
+    
+    
+    }
+    
+    input:focus{
+        border: 1.5px solid #ac0464;
+        outline: none;
+        transition: border-color 0.3s ease;
+    }
+    button:active{
+        background-color: #ac0464;
+        color: #fff;
+        border: 1px solid #ac0464;
+    }
+    button:hover{
+        background-color: #ac0464;
+        color: #fff;
+        border: 1px solid #ac0464;
+        transform: scale(1.05);
+    }
+}

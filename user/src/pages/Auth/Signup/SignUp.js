@@ -12,6 +12,7 @@ import {OTPIcon, VerifyIcon} from '../../../config/Config'
 import { SERVER_REQUEST } from '../../../shared/Backend';
 import { PaystackButton } from 'react-paystack';
 import { toast } from 'react-toastify';
+import { dataOne, dataTwo } from './data';
 
 
 const bgLeft = {
@@ -25,155 +26,8 @@ const bgLeft = {
 class SignUp extends Component{
 
     state = {
-        formOne: {
-            sex: {
-                elementType: 'select',
-                elementConfig: {
-                    type: 'select',
-                    options: [
-                        {value:'', displayValue:'Select Options', defaultValue:true, disabled:''},
-                        {value:'male', displayValue:'Male'},
-                        {value:'female', displayValue:'Female'}
-                    ]
-                    
-                },
-                label: 'I am a...',
-                value: '',
-                validation: {
-                    required: true
-                },
-                valid: false,
-                touched: false,
-                errorMsg:null
-                
-            },
-            category: {
-                elementType: 'select',
-                elementConfig: {
-                    type: 'select',
-                    options: [
-                        {value:'', displayValue:'Select Options', defaultValue:true, disabled:''},
-                        {value:'Relationship', displayValue:'Relationship'},
-                        {value:'FriendWithBenefit', displayValue:'Friends with Benefits'},
-                        {value:'SexHookUp', displayValue:'Sex Hookup'},
-                        {value:'SugarMummy', displayValue:'Sugar Mummy'},
-                        {value:'SugarDaddy', displayValue:'Sugar Daddy'},
-                        {value:'Strippers', displayValue:'Strippers'},
-                        {value:'PartyStarters', displayValue:'Party Starters'}
-                    ]
-                    
-                },
-                label: 'I am looking For ...',
-                value: '',
-                validation: {
-                    required: true
-                },
-                valid: false,
-                touched: false,
-                errorMsg:null
-                
-            }
-        },
-        formTwo:{
-            firstname: {
-                elementType: 'input',
-                elementConfig: {
-                    type: 'text',
-                    placeholder: 'e.g john'
-                },
-                label: 'First Name',
-                value: '',
-                validation: {
-                    required: true
-                },
-                valid: false,
-                touched: false,
-                errorMsg:null
-                
-            },
-            lastname: {
-                elementType: 'input',
-                elementConfig: {
-                    type: 'text',
-                    placeholder: 'e.g smith'
-                },
-                label: 'Last Name',
-                value: '',
-                validation: {
-                    required: true
-                },
-                valid: false,
-                touched: false,
-                errorMsg:null
-                
-            },
-            username: {
-                elementType: 'input',
-                elementConfig: {
-                    type: 'text',
-                    placeholder: 'e.g john001'
-                },
-                label: 'Username',
-                value: '',
-                validation: {
-                    required: true
-                },
-                valid: false,
-                touched: false,
-                errorMsg:null
-                
-            },
-            phonenumber: {
-                elementType: 'input',
-                elementConfig: {
-                    type: 'text',
-                    placeholder: 'e.g 08067278197'
-                },
-                label: 'Phone Number',
-                value: '',
-                validation: {
-                    required: true,
-                    isNumber:true
-                },
-                valid: false,
-                touched: false,
-                errorMsg:null
-                
-            },
-            email: {
-                elementType: 'input',
-                elementConfig: {
-                    type: 'email',
-                    placeholder: 'e.g myemail@gmail.com'
-                },
-                label: 'Email Address',
-                value: '',
-                validation: {
-                    required: true,
-                    email:true
-                },
-                valid: false,
-                touched: false,
-                errorMsg:null
-                
-            },
-            password: {
-                elementType: 'input',
-                elementConfig: {
-                    type: 'password',
-                    placeholder: ''
-                },
-                label: 'Password',
-                value: '',
-                validation: {
-                    required: true
-                },
-                valid: false,
-                touched: false,
-                errorMsg:null
-            },
-
-        },
+        formOne: dataOne,
+        formTwo: dataTwo,
 
         formOneIsValid: false,
         formTwoIsValid: false,

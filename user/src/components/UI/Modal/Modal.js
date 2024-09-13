@@ -1,26 +1,29 @@
-import React, { Component } from 'react';
+import React from 'react';
 import classes from "./Modal.module.css";
 import Backdrop from '../BackDrop/Backdrop';
 
-class Modal extends Component {
-    shouldComponentUpdate(nextProps, nextState){
-        return nextProps.show !== this.props.show || nextProps.children !== this.props.children
-    }
+const Modal = ({ show, modalClosed, children }) => {
+  // No need for `shouldComponentUpdate` in a functional component. 
+  // React.memo will handle the optimization for re-rendering.
 
-    render(){
-        return(
-            <React.Fragment>
-                <Backdrop show={this.props.show} close={this.props.modalClosed} /> 
-            <div  className={classes.Modal} style={{
-                transform:this.props.show ? 'translateY(0)': 'translateY(-100vh)',
-                opacity: this.props.show ? '1':'0'
-            }} >
-                <p className={classes.closeBtn} onClick={this.props.modalClosed}> x </p>
-                {this.props.children}
-            </div>
-            </React.Fragment>
-        )
-    }
-    
+  return (
+    <>
+      <Backdrop show={show} close={modalClosed} />
+      <div
+        className={classes.Modal}
+        style={{
+          transform: show ? 'translateY(0)' : 'translateY(-100vh)',
+          opacity: show ? '1' : '0',
+        }}
+      >
+        <p className={classes.closeBtn} onClick={modalClosed}> x </p>
+        {children}
+      </div>
+    </>
+  );
 };
-export default Modal;
+
+// Wrapping in React.memo for optimization similar to shouldComponentUpdate
+export default React.memo(Modal, (prevProps, nextProps) => 
+  prevProps.show === nextProps.show && prevProps.children === nextProps.children
+);
