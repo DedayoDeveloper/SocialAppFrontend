@@ -1,22 +1,9 @@
-# railway.toml
-
 [project]
-name = "SocialAppFrontend"  # Replace with the name of your Railway project
+name = "SocialAppFrontend"
 
-# Services configuration (optional if you're deploying services like Node, Python, etc.)
 [[services]]
-name = "SocialAppFrontend"  # Adjust the name as per your service
-path = "./user"   # Path to the user folder where the app is located
+name = "SocialAppFrontend"
+path = "./user"   # Path to your React app directory
 
 [build]
-nixpacksLanguage = "nodejs" 
-
-# Build configuration for deployment
-[deploy]
-# Context is set to the user directory for deployments
-context = "./user"
-
-# Optional: Environment variables can be defined here if needed
-[env]
-NODE_ENV = "production"
-
+dockerfile = "./user/Dockerfile"  # Specify the Dockerfile
