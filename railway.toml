@@ -4,7 +4,7 @@
 name = "SocialAppFrontend"  # Update this with your project name
 
 [[services]]
-name = "frontend"  # Name your service
+name = "SocialAppFrontend"  # Name your service
 path = "./user"  # The React app is in the 'user' folder
 
 [build]
