@@ -8,7 +8,4 @@ name = "SocialAppFrontend"  # Name your service
 path = "./user"  # The React app is in the 'user' folder
 
 [build]
-builder = "nixpacks"  # Specify Nixpacks for automatic build detection
-
-[deploy]
-context = "./user"  # Point to the 'user/' folder for deployment
+dockerfile = "./user/Dockerfile" 
