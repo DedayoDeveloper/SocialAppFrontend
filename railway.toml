@@ -8,6 +8,9 @@ name = "SocialAppFrontend"  # Replace with the name of your Railway project
 name = "SocialAppFrontend"  # Adjust the name as per your service
 path = "./user"   # Path to the user folder where the app is located
 
+[build]
+nixpacksLanguage = "nodejs" 
+
 # Build configuration for deployment
 [deploy]
 # Context is set to the user directory for deployments
@@ -16,3 +19,4 @@ context = "./user"
 # Optional: Environment variables can be defined here if needed
 [env]
 NODE_ENV = "production"
+
