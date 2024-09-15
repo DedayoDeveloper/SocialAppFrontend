@@ -1,13 +1,17 @@
 # railway.toml
 
 [project]
-name = "SocialAppFrontend"  # Update this with your project name
+name = "SocialAppFrontend"  # Replace with your project name
 
 [[services]]
-name = "SocialAppFrontend"  # Name your service
-path = "./user"  # The React app is in the 'user' folder
+name = "SocialAppFrontend"
+path = "./user"  # The path to your React app
 
 [build]
-builder = "nixpacks"
-nixpacksLanguage = "nodejs"
-nixpacksVersion = "14.x" 
+builder = "nixpacks"  # Use Nixpacks to auto-detect the build environment
+
+[deploy]
+context = "./user"  # Set deployment context to the user directory
+
+[env]
+NODE_ENV = "production"  # Add any necessary environment variables here
