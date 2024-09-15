@@ -8,4 +8,6 @@ name = "SocialAppFrontend"  # Name your service
 path = "./user"  # The React app is in the 'user' folder
 
 [build]
-dockerfile = "./user/Dockerfile" 
+builder = "nixpacks"
+nixpacksLanguage = "nodejs"
+nixpacksVersion = "14.x" 
